@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilots de fraicheur à Nantes Métropole</title>
+    <link href="./src/style.css" rel="stylesheet">
+  </head>
+
+  <header>
+    <h1 class="title">Ilôts de fraicheur à Nantes Métropole</h1>
+  </header>
+
+  <aside class="filtre">
+    <h2 class="filtre_title"></h2>
+  </aside>
+
+  <section class="card_container"></section>
+
+  <div class="map_container">
+    <h2 class="map_title"></h2>
+    <iframe src="https://data.nantesmetropole.fr/explore/embed/dataset/244400404_ilot-fraicheur-nantes-metropole/map/?disjunctive.type_ifu&sort=-id_ifu&location=18,47.19683,-1.60836&basemap=jawg.streets&static=false&datasetcard=false&scrollWheelZoom=false" width="200" height="500" frameborder="0"></iframe>
+  </div>
+
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

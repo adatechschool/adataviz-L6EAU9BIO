@@ -1,0 +1,15 @@
+:root {
+  --dark_green : rgb(50, 123, 50);
+  --light_green : rgb(123, 173, 123);
+
+}
+
+*{
+  margin: 0
+}
+
+header {
+  background-color: var(--dark_green);
+  border : 1rem;
+}
+
