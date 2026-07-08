@@ -1,15 +1,76 @@
 :root {
+  /* COULEURS */
   --dark_green : rgb(50, 123, 50);
   --light_green : rgb(123, 173, 123);
-
+  --grey_green : rgb(173, 191, 173);
+  --white : white; 
+  /* RADIUS */
+  --regular_radius: 10px;
+  --medium_radius: 20px;
 }
-
+/* RESET */
 *{
-  margin: 0
+  margin: 0;
 }
 
 header {
+  height: 100px;
   background-color: var(--dark_green);
-  border : 1rem;
+  padding : 1rem;
+  display: flex;
+  position: sticky;
+    .logo_ilot {
+      height: 100px;
+      width: 100px;
+    }
 }
 
+.title {
+  color: var(--white);
+}
+
+.main_content {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+/* ASIDE FILTRE  */
+.filtre {
+  background-color: var(--light_green);
+  display : flex;
+  flex-direction: column;
+  height: 100%;;
+  padding : 1rem;
+    input {
+      margin-bottom: 1rem;
+    }
+    select {
+      margin-bottom: 1rem;
+    }
+   position: sticky;
+}
+
+.filtre_title {
+  margin-bottom: 1.5rem;
+}
+/* CARDS */
+.card_container {
+  overflow-y: auto;
+  .card {
+    background-color: var(--grey_green);
+    .nom_ilot_card {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+/* CARTOGRPAHIE  */
+.map_container {
+    display: flex;
+    position: sticky;
+    height: 100%;
+    /* align-items: center; */
+}
+
+.map_title {
+
+}
