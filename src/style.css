@@ -84,6 +84,13 @@ header {
 /* CARDS */
 .card_container {
   overflow-y: auto;
+  .total_ilot{
+    background-color: var(--light_green);
+    padding : 1rem;
+    margin: 1rem;
+    border-radius: var(--regular_radius);
+    font-weight: 800;
+  }
   .card {
     background-color: var(--grey_green);
     padding : 1rem;

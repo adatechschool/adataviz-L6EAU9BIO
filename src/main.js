@@ -1,4 +1,5 @@
 const card = document.querySelector(".card_container")
+const total_ilot = document.querySelector(".total_ilot")
 
 const fetchData = async () => {
   try {
@@ -6,7 +7,15 @@ const fetchData = async () => {
     const data = await response.json()
     console.log(data);
     
+      const total_ilot_content = 
+      `<p> Total des Ilots de fraicheur: ${data.total_count}</p>`
+      console.log(total_ilot_content);
+      
+      total_ilot.insertAdjacentHTML("beforeend",total_ilot_content)
+    
+    
     data.results.forEach((element) =>{
+      
       const card_content = 
       `<article class="card"><p class="nom_ilot_card"> ${element.nom_ifu} </p>
       <p>${element.type_ifu}</p>
