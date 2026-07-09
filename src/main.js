@@ -12,8 +12,8 @@ const fetchData = async () => {
       <p>${element.type_ifu}</p>
       <p>${ element.horaire_ifu !== null ? element.horaire_ifu : "Pas d'horaires"}</p>
       <p>${element.adresse_ifu}</p>
-      <p>${element.code_insee}</p>
-      <p>${element.commune}</p>
+      <!-- <p>${element.code_insee}</p>
+      <p>${element.commune}</p> -->
       </article>`
       card.insertAdjacentHTML("beforeend", card_content)
     })
