@@ -1,0 +1,140 @@
+:root {
+  /* COULEURS */
+  --dark_green : rgb(50, 123, 50);
+  --light_green : rgb(123, 173, 123);
+  --grey_green : rgb(173, 191, 173);
+  --white : white; 
+  
+  /* FONTS */
+  --font_title: "Fraunces" , serif;
+  --font_body: "Inter", sans-serif;
+  
+  /* RADIUS */
+  --regular_radius: 10px;
+  --medium_radius: 20px;
+}
+/* RESET */
+*{
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+header {
+  height: 100px;
+  background-color: var(--dark_green);
+  padding : 1rem;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  font-family: var(--font_title);
+  gap : 1rem;
+    .logo_ilot {
+      height: 100px;
+      width: 100px;
+    }
+    .logo_nantes_m {
+      height: 100px;
+      width: 100px;
+      margin-left: auto;
+    }
+}
+
+.title {
+  color: var(--white);
+}
+
+.main_content {
+  display: flex;
+  height: calc(100vh - 100px);
+  font-family: var(--font_body);
+}
+/* ASIDE FILTRE  */
+.filtre {
+  background-color: var(--light_green);
+  display : flex;
+  flex-direction: column;
+  height: 100%;;
+  padding : 1rem;
+  color: var(--white);
+  flex: 0 0 250px;
+    input {
+      margin-bottom: 1rem;
+    }
+    select {
+      margin-bottom: 1rem;
+    }
+    input {
+      border: none;
+      border-radius: var(--regular_radius);
+      padding: 0.5rem;
+    }
+    select {
+      border: none;
+      border-radius: var(--regular_radius);
+      padding: 0.5rem;
+    }
+   position: sticky;
+}
+
+.filtre_title {
+  margin-bottom: 1.5rem;
+}
+/* CARDS */
+.card_container {
+  overflow-y: auto;
+  flex: 1;
+  .total_ilot{
+    background-color: var(--light_green);
+    padding : 1rem;
+    margin: 1rem;
+    border-radius: var(--regular_radius);
+    font-weight: 800;
+  }
+  .card {
+    background-color: var(--grey_green);
+    padding : 1rem;
+    margin: 1rem;
+    border-radius: var(--regular_radius);
+  
+    .nom_ilot_card  {
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    
+  }
+}
+
+  .no_result {
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 1rem;
+      background-color: var(--grey_green);
+      padding : 1rem;
+      margin: 1rem;
+      border-radius: var(--regular_radius);
+      
+    }
+
+/* CARTOGRPAHIE  */
+.map_container {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    height: 100%;
+    background-color: var(--light_green);
+    flex: 0 0 300px;
+    .map_title {
+      text-align: center;
+      margin: 1rem;
+      color: var(--white);
+    }
+   
+    iframe {
+      margin: 1rem;
+      border-radius: var(--medium_radius);
+    }
+}

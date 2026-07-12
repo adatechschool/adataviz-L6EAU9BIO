@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilots de fraicheur - Nantes Métropole</title>
+    <link href="./src/style.css" rel="stylesheet">
+
+    <!-- INTER FRAUNCES FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+  
+    <header>
+      <img class="logo_ilot" src="images/logo_ilot.png" alt="Logo Ilots de Fraicheur"></img>
+      <h1 class="title">Ilôts de fraicheur - Nantes Métropole</h1>
+      <img class="logo_nantes_m" src="images/logo_nantes_m.png" alt="Logo Nantes Metropole"></img>
+  </header>
+  
+  <main class="main_content">
+    <aside class="filtre">
+      <h2 class="filtre_title">Filtres</h2>
+     
+      <!-- NOM DE L ILOT -->
+      <label for="nom_ilot">Nom</label>
+      <input type="text" class="nom_ilot">
+  
+      
+      <!-- TYPE D ILOT -->
+      <label for="type-ilot">Type</label>
+      <select class="type_ilot">
+        <option value="">-</option>
+        <option value="Parcs et jardins">Parcs et jardins</option>
+        <option value="Espaces publics arborés (hors parcs et jardins)">Espaces publics arborés (hors parcs et jardins)</option>
+        <option value="Espaces naturels aménagés">Espaces naturels aménagés</option>
+      </select>
+      
+      <!-- HORAIRES -->
+      <label for="horaires_ilot">Horaires</label> 
+      <select class="horaires_ilot">
+        <option value="">-</option>
+        <option value="avec_horaire">Avec horaires d'ouverture</option>
+        <option value="sans_horaire">Sans horaires d'ouverture</option>
+       </select>
+      
+       <!-- ADRESSE -->
+      <label for="">Adresse</label>
+      <input type="text" class="adress_ilot">
+  
+      <!-- JEU DE DONNES COROMPU SUR CES DEUX ELEMENTS DEPUIS JEUDI 09/07 -->
+      <!-- CODE POSTAL -->
+        <!-- <label for="code_ilot">Code Postal</label>
+        <input type="text" class="code_ilot"> -->
+  
+      <!-- COMMUNE -->
+        <!-- <label for="commuen_ilot">Commune</label>
+        <input type="text" class="commune_ilot"> -->
+    </aside>
+  
+    <section class="card_container">
+      <article class="total_ilot"></article>
+    </section>
+  
+    <div class="map_container">
+      <h2 class="map_title">CARTE INTERACTIVE</h2>
+      <iframe src="https://data.nantesmetropole.fr/explore/embed/dataset/244400404_ilot-fraicheur-nantes-metropole/map/?disjunctive.type_ifu&sort=-id_ifu&location=18,47.19683,-1.60836&basemap=jawg.streets&static=false&datasetcard=false&scrollWheelZoom=false" width="600" height="700
+    " frameborder="0"></iframe>
+    </div>
+  
+    
+      
+  </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
