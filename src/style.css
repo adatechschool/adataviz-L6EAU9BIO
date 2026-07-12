@@ -59,6 +59,7 @@ header {
   height: 100%;;
   padding : 1rem;
   color: var(--white);
+  flex: 0 0 250px;
     input {
       margin-bottom: 1rem;
     }
@@ -84,6 +85,7 @@ header {
 /* CARDS */
 .card_container {
   overflow-y: auto;
+  flex: 1;
   .total_ilot{
     background-color: var(--light_green);
     padding : 1rem;
@@ -97,12 +99,26 @@ header {
     margin: 1rem;
     border-radius: var(--regular_radius);
   
-    .nom_ilot_card {
+    .nom_ilot_card  {
       font-size: 20px;
       text-align: center;
+      padding-bottom: 1rem;
     }
+    
   }
 }
+
+  .no_result {
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 1rem;
+      background-color: var(--grey_green);
+      padding : 1rem;
+      margin: 1rem;
+      border-radius: var(--regular_radius);
+      
+    }
+
 /* CARTOGRPAHIE  */
 .map_container {
     display: flex;
@@ -110,7 +126,7 @@ header {
     position: sticky;
     height: 100%;
     background-color: var(--light_green);
-    /* align-items: center; */ 
+    flex: 0 0 300px;
     .map_title {
       text-align: center;
       margin: 1rem;

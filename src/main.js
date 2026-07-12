@@ -40,9 +40,16 @@ document.querySelector(".adress_ilot").addEventListener("input", applyFilters)
 
 // CONTENEUR QUI SE VIDE AU FUR ET A MESURE
 const displayCards = (dataArray) => {
-  card.querySelectorAll(".card").forEach((el) =>el.remove())
+  card.querySelectorAll(".card, .no_result").forEach((el) =>el.remove())
+  
+  if (dataArray.length === 0) {
+  card.insertAdjacentHTML("beforeend", `<p class="no_result">Aucun îlot ne correspond à votre recherche</p>`)
+  return
+}  else {
+  
   dataArray.forEach((element) => {
-    
+  
+
     const card_content = 
         `<article class="card"><p class="nom_ilot_card"> ${element.nom_ifu} </p>
         <p>${element.type_ifu}</p>
@@ -53,7 +60,7 @@ const displayCards = (dataArray) => {
         </article>`
         
         card.insertAdjacentHTML("beforeend", card_content)
-  })
+  })}
 }
 
 
